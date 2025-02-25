@@ -1,0 +1,38 @@
+*{
+    margin: 20px;   
+}
+.header{
+    text-align: center;
+    font-family: var(--var-sds-typography-body-font-family, "Inter-Regular", sans-serif);
+    font-size: 30px;
+    line-height: 50%;
+}
+.taskInput{
+    text-align: center;
+    margin-top: 100px;
+    display: block;
+
+}
+.content{
+    text-align: center;
+}
+input{
+    width: 45%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+ul{
+    list-style: none; 
+    padding: 0; 
+}
+.done { 
+    text-decoration: line-through; 
+    color: gray; 
+}
+span{
+    font-size: 23px;
+}
+
