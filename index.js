@@ -16,7 +16,7 @@ function renderTask(taskText, done = false) {
     
     let doneBtn = document.createElement("button");
     doneBtn.innerText = "Done";
-    doneBtn.onclick = () => toggleTask(li);
+    doneBtn.onclick = () => doneTask(li);
     
     let undoneBtn = document.createElement("button");
     undoneBtn.innerText = "Undone";
@@ -52,7 +52,7 @@ function createTask() {
     }
 }
 
-function toggleTask(li) {
+function doneTask(li) {
     li.classList.toggle("done");
     saveTasks();
 }
