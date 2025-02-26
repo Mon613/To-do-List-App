@@ -12,8 +12,6 @@ function renderTask(taskText, done = false) {
     span.contentEditable = true;
     span.addEventListener("input", saveTasks);
     
-    if (done) li.classList.add("done");
-    
     let doneBtn = document.createElement("button");
     doneBtn.innerText = "Done";
     doneBtn.onclick = () => doneTask(li);
