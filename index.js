@@ -9,11 +9,15 @@ function renderTask(taskText, done = false) {
     let d = new Date();
     let li = document.createElement("li");
     let span = document.createElement("span");
-    let date = document.createElement("span");
-    date.innerText =d.toUTCString();
+    let date = document.createElement("p")
     span.innerText = taskText;
     span.contentEditable = true;
     span.addEventListener("input", saveTasks);
+    // date.innerText = d.toLocaleString('vi', {
+    //         dateStyle: 'short',
+    //         timeStyle: 'medium',
+    //         timeZone: 'Asia/Ho_Chi_Minh',
+    // });
     
     let doneBtn = document.createElement("button");
     doneBtn.innerText = "Done";
@@ -27,7 +31,7 @@ function renderTask(taskText, done = false) {
     deleteBtn.innerText = "Delete";
     deleteBtn.onclick = () => deleteTask(li);
     
-    li.append(date, span, doneBtn, undoneBtn, deleteBtn);
+    li.append(span, doneBtn, undoneBtn, deleteBtn);
     document.getElementById("taskList").prepend(li);
 }
 
@@ -50,6 +54,8 @@ function createTask() {
         renderTask(input.value);
         saveTasks();
         input.value = "";
+    }else{
+        alert("Vui lòng nhập task!")
     }
 }
 
